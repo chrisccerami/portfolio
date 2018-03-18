@@ -1,0 +1,16 @@
+default: &default
+  adapter: pg
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: chrisccerami_development
+
+test:
+  <<: *default
+  database: chrisccerami_test
+
+production:
+  <<: *default
+  database: chrisccerami
