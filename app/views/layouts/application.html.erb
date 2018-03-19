@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chrisccerami</title>
+    <title>Chris C Cerami</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <div class="notice"><%= notice %></div>
+    <div class="error"><%= alert %></div>
     <%= yield %>
   </body>
 </html>

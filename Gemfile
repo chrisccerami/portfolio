@@ -13,6 +13,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
+gem 'devise'
+gem 'haml-rails'
+gem 'dotenv-rails'
+gem 'aws-sdk-s3'
+gem 'paperclip', "~> 6.0.0"
+
 group :development, :test do
   gem 'pry'
 end

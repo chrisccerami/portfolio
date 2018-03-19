@@ -1,0 +1,2 @@
+= form_for @page, url: admin_comic_page_path, html: { multipart: true } do |f|
+  = render partial: "form", locals: {page: @page, f: f}

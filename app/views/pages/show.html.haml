@@ -1,0 +1,16 @@
+.comic
+  %h2= "#{@comic.title} - page #{@page.number}"
+
+  .page
+    .frame
+      = image_tag @page.image
+
+    .pagination
+      - if @page.first?
+        %span.disabled-link Previous Page
+      - else
+        = link_to "Previous Page", comic_page_path(@comic, @page.number - 1)
+      - if @page.last?
+        %span.disabled-link Next Page
+      - else
+        = link_to "Next Page", comic_page_path(@comic, @page.number + 1)

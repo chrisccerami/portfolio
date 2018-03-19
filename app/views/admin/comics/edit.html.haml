@@ -1,0 +1,4 @@
+= form_for @comic, url: admin_comic_path(@comic) do |f|
+  = render partial: "form", locals: {comic: @comic, f: f}
+
+= link_to "Edit this comic's pages", admin_comic_pages_path(@comic)

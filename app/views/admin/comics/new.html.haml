@@ -1,0 +1,2 @@
+= form_for @comic, url: admin_comics_path do |f|
+  = render partial: "form", locals: {comic: @comic, f: f}

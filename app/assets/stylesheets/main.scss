@@ -1,0 +1,30 @@
+body {
+  background-color: #D0FFF5;
+}
+
+.comic {
+  h2 {
+    text-align: center;
+  }
+}
+
+.page {
+
+  .frame {
+    text-align: center;
+
+    img {
+      height: 80vh;
+      border: 2px solid black;
+    }
+  }
+
+  .pagination {
+    text-align: center;
+
+    .disabled-link {
+      cursor: not-allowed;
+      color:grey;
+    }
+  }
+}

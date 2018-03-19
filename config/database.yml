@@ -1,15 +1,17 @@
 default: &default
-  adapter: pg
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: postgresql
+  pool: 5
   timeout: 5000
 
 development:
   <<: *default
   database: chrisccerami_development
+  password: <%= ENV["RAILS_DB_PASSWORD"] %>
 
 test:
   <<: *default
   database: chrisccerami_test
+  password: <%= ENV["RAILS_DB_PASSWORD"] %>
 
 production:
   <<: *default
