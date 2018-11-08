@@ -60,11 +60,11 @@ body {
 }
 
 @font-face {
-font-family: 'SaucerBB';
-src: url('SaucerBB.ttf') format('truetype');
+  font-family: 'SaucerBB';
+  src: font-url( asset-path("SaucerBB.ttf") ) format("truetype"),
 }
 
 @font-face {
-font-family: 'carbon';
-src: url('carbon.ttf') format('truetype');
+  font-family: 'carbon';
+  src: font-url( asset-path("carbon.ttf") ) format("truetype");
 }
