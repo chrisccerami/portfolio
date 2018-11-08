@@ -4,6 +4,6 @@
   %div
     %div
       = link_to "Edit page #{page.number}", edit_admin_comic_page_path(@comic, page)
-    = image_tag page.image.url, style: "width: 300px;"
+    = image_tag page.image, style: "width: 300px;"
 
 = link_to "Add a new page to #{@comic.title}", new_admin_comic_page_path(@comic)

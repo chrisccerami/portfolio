@@ -29,7 +29,6 @@ class Admin::PagesController < AdminController
       flash[:notice] = "Page Updated"
       redirect_to admin_comic_pages_path
     else
-      binding.pry
       flash[:error] = @page.errors.full_messages
       render :edit
     end

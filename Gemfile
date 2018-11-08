@@ -17,10 +17,18 @@ gem 'devise'
 gem 'haml-rails'
 gem 'dotenv-rails'
 gem 'aws-sdk-s3'
-gem 'paperclip', "~> 6.0.0"
+gem 'mini_magick'
 
 group :development, :test do
   gem 'pry'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_bot'
+  gem 'factory_bot_rails'
 end
 
 group :development do

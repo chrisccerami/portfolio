@@ -1,14 +1,21 @@
 class Page < ApplicationRecord
   belongs_to :comic
 
-  has_attached_file :image, storage: :s3, s3_credentials: S3_CREDENTIALS, s3_region: 'us-east-1'
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+  has_one_attached :image
 
   def first?
-    number == 1
+    comic.pages.minimum(:number) == number
   end
 
   def last?
     comic.pages.maximum(:number) == number
+  end
+
+  def next
+    comic.pages.where("number > ?", number).first
+  end
+
+  def previous
+    comic.pages.where("number < ?", number).last
   end
 end

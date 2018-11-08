@@ -9,8 +9,11 @@
       - if @page.first?
         %span.disabled-link Previous Page
       - else
-        = link_to "Previous Page", comic_page_path(@comic, @page.number - 1)
+        = link_to "Previous Page", comic_page_path(@comic, @page.previous.number)
       - if @page.last?
         %span.disabled-link Next Page
       - else
-        = link_to "Next Page", comic_page_path(@comic, @page.number + 1)
+        = link_to "Next Page", comic_page_path(@comic, @page.next.number)
+
+        %p
+          = link_to "Back to other comics", comics_path

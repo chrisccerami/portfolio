@@ -1,3 +1,6 @@
-- @comics.each do |comic|
-  %div
-    = link_to comic.title, comic_path(comic)
+%ul.comic-list
+  - @comics.each do |comic|
+    %li
+      = link_to comic.title, comic_page_path(comic, comic.pages.first.number)
+      %p= comic.description
+      = image_tag comic.pages.first.image

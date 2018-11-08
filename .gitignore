@@ -6,5 +6,6 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+storage/
 
 .env
