@@ -13,6 +13,7 @@ class Admin::ComicsController < AdminController
 
   def create
     @comic = Comic.new comic_params
+    @comic.slug = @comic.title.parameterize
 
     if @comic.save
       redirect_to admin_comics_path
@@ -35,6 +36,8 @@ class Admin::ComicsController < AdminController
   private
 
   def comic_params
-    params.require(:comic).permit(:title, :description)
+    hash = params.require(:comic).permit(:title, :description)
+    hash[:slug] = hash[:title].parameterize
+    hash
   end
 end

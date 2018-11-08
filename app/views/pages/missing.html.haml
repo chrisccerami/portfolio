@@ -1,2 +1,2 @@
 You seem to have gotten lost somehow. Sorry about that! You can get back to the comic you were reading
-= link_to "here", comic_path(@comic)
+= link_to "here", comic_page_path(@comic.slug, @comic.pages.first.number)

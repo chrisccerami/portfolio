@@ -3,6 +3,8 @@ class Page < ApplicationRecord
 
   has_one_attached :image
 
+  validates :number, :comic, presence: true
+
   def first?
     comic.pages.minimum(:number) == number
   end
