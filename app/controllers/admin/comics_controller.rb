@@ -13,7 +13,6 @@ class Admin::ComicsController < AdminController
 
   def create
     @comic = Comic.new comic_params
-    @comic.slug = @comic.title.parameterize
 
     if @comic.save
       redirect_to admin_comics_path
